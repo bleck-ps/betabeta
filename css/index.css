@@ -329,9 +329,9 @@ footer .footertwo a {
 
 .campanamaster {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
+    max-height: 90vh;
     max-width: 100vw;
-    max-height: 100vh;
     display: none;
     opacity: 0;
     position: fixed;
@@ -342,22 +342,21 @@ footer .footertwo a {
     transition: 1s ease;
 }
 .campanamaster .campanabox {
-    height: 90vh;
-    width: fit-content;
     position: fixed;
     display: flex;
     justify-content: center;
     bottom:5vh;
 }
 .campanamaster .campanabox video {
-    height: 100%;
-    max-height: 80vh;
+    max-width: 90vw;
+    max-height: 90vh;
     border: 5px solid #fff;
     border-radius: 30px;
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.6);
     transform: translateX(20px);
-    overflow: clip;
     object-fit: contain;
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 .campanamaster .campanabox .vermas {
     position: absolute;
@@ -410,5 +409,20 @@ footer .footertwo a {
     }
     .campanamaster .campanabox video {
         width: 100%;
+    }
+}
+@media screen and (max-width: 350px) {
+    .campanamaster .campanabox .vermas {
+        position: absolute;
+        bottom: 50px;
+        font-family: majestic;
+        font-size: 15px;
+        background: #dda245;
+        color: #fff;
+        padding: 10px;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.9);
+        z-index: 500;
     }
 }
