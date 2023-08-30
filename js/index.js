@@ -208,7 +208,7 @@ function videostart(){
     setTimeout(function(){
         campanabox.style.opacity = "1";
         campanabox.style.top = "0px";
-        //document.getElementById('videocampana').play();
+        document.getElementById('videocampana').play();
         campanabutton.addEventListener('click',function(){
             campanabox.style.opacity = "0";
             campanabox.style.top = "500px";
