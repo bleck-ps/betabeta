@@ -1,0 +1,412 @@
+@font-face {
+    font-family: majestic;
+    src: url(../fonts/MajesticSchnozz.otf);
+}
+@font-face {
+    font-family: dmsans;
+    src: url(../fonts/DMSansMedium.ttf);
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    background:#f0eadb ;
+}
+nav {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(50,28,112);
+    background: #f0eadb;
+    overflow: hidden;
+    transition: 500ms ease;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    z-index: 200;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+nav:hover {
+    cursor: pointer;
+}
+nav .navbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .navbox .navbefore {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .navbox .navbefore .navmenut {
+    display: none;
+    width: 90%;
+    transition: 500ms ease;
+    opacity: 0;
+}
+nav .navbox .navbefore .navlogot {
+    width: 30%;
+    display: flex;
+    transition: 1s ease;
+}
+nav .navbox .navbefore .leselect {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease;
+}
+nav .navbox .navbefore .leselectbox {
+    width: 60%;
+    background: #dda245;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 10px;
+}
+nav .navbox .navbefore .leselectbox .seesp {
+    font-size: 30px;
+    text-align: center;
+    font-family: majestic;
+    color: #f5f0e3;
+}
+nav .navbox .navbefore .leselectbox .seing {
+    font-size: 15px;
+    text-align: center;
+    font-family: majestic;
+    color: #f9e9c2;
+    margin-bottom: 10px;
+}
+nav .navbox .navbefore .leselectbox button {
+    background: #bc4742;
+    color:#f5f0e3 ;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    font-family: majestic;
+    border-radius: 10px;
+}
+
+
+
+
+nav .navbox .navafter {
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 0px auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    transition: 5ms ease;
+    opacity: 0;
+}
+nav .navbox .navafter .imgvancont {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    top: 10px;
+    overflow-y: scroll;
+    padding: 50px 0px;
+}
+nav .navbox .navafter .imgvancont img {
+    width: 90%;
+    z-index: 220;
+}
+
+.ghost {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    position: fixed;
+    top: 0px;
+    z-index: 190;
+    opacity: 0;
+    display: none;
+    transition: 1s ease;
+}
+
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background:url(../img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: none;
+}
+.hero .herobox {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+}
+.hero .herobox .logo {
+    width: 30%;
+}
+.hero .herobox .logo img {
+    width: 100%;
+}
+.hero .herobox .logo p {
+    margin-top: 10px;
+    font-family: majestic;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+.menus {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/back.png);
+}
+.menus .menubox {
+    width: 40%;
+    height: 95%;
+    overflow-y: scroll;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: -5px 2px 10px rgba(0, 0, 0, 0.553);
+}
+.menus .menubox div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.menus .menubox div img {
+    width: 100%;
+}
+.menus .menubox .buttonmenu {
+    width: 80%;
+    margin:30px 0px;
+    border-radius: 20px;
+    display: none;
+}
+
+.contpage {
+    display: none;
+}
+.traveler {
+    width: 200px;
+    height: 100px;
+    position: fixed;
+    bottom: 230px;
+    left: -5px;
+    display: none;
+    transition: 1s ease;
+    z-index: 100;
+    box-sizing: border-box;
+}
+.traveler .travelerbox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #ef8112;
+    border:5px solid #fff;
+    border-radius: 0px 50px 50px 0px;
+    justify-content: space-between;
+    padding: 0px 10px;
+    gap: 10px;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+.traveler .travelerbox p {
+    font-size: 20px;
+    color: #fff;
+    font-family: majestic;
+}
+.traveler .travelerbox p a {
+    text-decoration: none;
+    color: #fff;
+}
+.traveler .travelerbox .travelericon {
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+.traveler .travelerbox .travelericon img {
+    height: 50%;
+    transition: 1s ease;
+    border-radius: 50%;
+}
+
+
+footer {
+    background: #030e1e;
+    width: 100vw;
+    height: fit-content;
+    display: none;
+    flex-wrap: wrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    position: absolute;
+    left: 0px;
+    top: 90vh;
+}
+footer .footerone {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footerone .legaal {
+    width: 30%;
+    height: 100%;
+}
+footer .footerone .legaal a {
+    width: 100%;
+    height: 100%;
+}
+footer .footerone .legaal a img {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 200px;
+}
+footer .footerone .redes {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+    align-items: center;
+}
+footer .footerone .redes img {
+    width: 30px;
+    border-radius: 50%;
+}
+
+footer .footertwo {
+    margin-top: 60px;
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+}
+footer .footertwo a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-family: dmsans;
+}
+
+/*Video de campaña*/
+
+.campanamaster {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 500px;
+    z-index: 300;
+    box-sizing: border-box;
+    justify-content: center;
+    transition: 1s ease;
+}
+.campanamaster .campanabox {
+    height: 90vh;
+    width: fit-content;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    bottom:5vh;
+}
+.campanamaster .campanabox video {
+    height: 100%;
+    max-height: 80vh;
+    border: 5px solid #fff;
+    border-radius: 30px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.6);
+    transform: translateX(20px);
+}
+.campanamaster .campanabox .vermas {
+    position: absolute;
+    bottom: 100px;
+    font-family: majestic;
+    font-size: 20px;
+    background: #dda245;
+    color: #fff;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.9);
+    z-index: 500;
+}
+.campanamaster .campanabox .videoclose {
+    position: sticky;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 0px;
+    transform: translateX(-10px);
+    font-family: Arial;
+    font-size: 15px;
+    background: #dda245;
+    color: #fff;
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.9);
+    z-index: 501;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .menus .menubox {
+        width: 90%;
+    }
+    .hero .herobox .logo {
+        width: 80%;
+    }
+    nav .navbox .navbefore .navlogot {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .campanamaster .campanabox {
+        height: fit-content;
+        width: 80%;
+        bottom:0;
+    }
+    .campanamaster .campanabox video {
+        width: 100%;
+    }
+}
