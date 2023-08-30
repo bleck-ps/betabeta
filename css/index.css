@@ -357,6 +357,7 @@ footer .footertwo a {
     box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.6);
     transform: translateX(20px);
     overflow: clip;
+    object-fit: contain;
 }
 .campanamaster .campanabox .vermas {
     position: absolute;
